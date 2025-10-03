@@ -8,74 +8,80 @@
       name="description"
       content="Tiabyte — Websites, programming, application development, and database work."
     />
+    <!-- VT323 retro terminal font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
     <!-- Production build: compiled Tailwind CSS -->
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body class="bg-neutral-950 text-neutral-200 antialiased">
-    <!-- Header / Nav -->
-    <header
-      class="border-b border-neutral-800/60 bg-neutral-950/80 backdrop-blur"
-    >
+  <body
+    class="bg-black text-brand-300 antialiased font-mono selection:bg-brand-500 selection:text-black"
+  >
+    <!-- Top status bar -->
+    <header class="border-b border-brand-700/30 bg-black/90 backdrop-blur">
       <div
-        class="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between"
+        class="mx-auto max-w-7xl px-4 md:px-6 py-3 flex items-center justify-between"
       >
-        <a href="#" class="group inline-flex items-center gap-2">
+        <div class="flex items-center gap-3">
           <span
-            class="inline-block size-2 rounded-full bg-brand-500 group-hover:bg-brand-400 transition"
+            class="size-2 rounded-sm bg-brand-500 shadow-[0_0_8px_theme(colors.brand.500)]"
           ></span>
-          <span class="text-lg tracking-tight">Tiabyte</span>
-        </a>
-        <nav class="hidden md:flex items-center gap-8">
+          <span class="text-brand-400 text-glow"
+            >[ TIABYTE // sys:online ]</span
+          >
+        </div>
+        <nav class="hidden md:flex items-center gap-6">
           <a
             href="#services"
-            class="text-sm text-neutral-300 hover:text-white transition"
-            >Services</a
+            class="text-sm text-brand-300 hover:text-brand-100 transition"
+            >[ SERVICES ]</a
           >
           <a
             href="#contact"
-            class="text-sm text-neutral-300 hover:text-white transition"
-            >Contact</a
+            class="text-sm text-brand-300 hover:text-brand-100 transition"
+            >[ CONTACT ]</a
           >
         </nav>
         <a
           href="#contact"
-          class="hidden md:inline-flex items-center gap-2 rounded-full border border-brand-600/40 bg-brand-600/10 px-4 py-2 text-sm text-brand-200 hover:bg-brand-600/20 transition"
+          class="hidden md:inline-flex items-center gap-2 rounded border border-brand-700 bg-brand-600/10 px-3 py-1.5 text-sm text-brand-200 hover:bg-brand-500/15 transition shadow-[0_0_10px_theme(colors.brand.600)]"
         >
-          Let’s talk
+          > CONNECT
         </a>
       </div>
     </header>
 
-    <!-- Hero -->
-    <section class="relative overflow-hidden">
-      <div class="pointer-events-none absolute inset-0 -z-10">
-        <div
-          class="absolute -top-24 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-brand-500/10 blur-3xl"
-        ></div>
-      </div>
-      <div class="mx-auto max-w-7xl px-6 py-20">
+    <!-- Hero with scanlines -->
+    <section class="relative scanlines">
+      <div class="mx-auto max-w-7xl px-4 md:px-6 py-16 md:py-20">
         <div class="max-w-3xl">
           <h1
-            class="text-4xl md:text-5xl font-semibold tracking-tight text-white"
+            class="text-4xl md:text-5xl tracking-tight text-brand-100 text-glow"
           >
-            Building fast, modern web experiences for ambitious teams.
+            tiabyte:~$ build --fast --modern --secure<span
+              class="ml-2 align-baseline text-brand-400 caret"
+              >█</span
+            >
           </h1>
-          <p class="mt-4 text-neutral-400 max-w-prose">
-            Tiabyte delivers end‑to‑end implementation from concept to
-            production—clean code, thoughtful UX, and reliable deployment.
+          <p class="mt-4 text-brand-300/90 max-w-prose">
+            End‑to‑end delivery from concept to production with clean code,
+            accessible UIs, and reliable deployments, crafted for the
+            command‑line generation.
           </p>
           <div class="mt-8 flex items-center gap-3">
             <a
               href="#services"
-              class="inline-flex items-center rounded-lg bg-white px-4 py-2 text-sm font-medium text-neutral-900 hover:bg-neutral-200 transition"
+              class="inline-flex items-center rounded border border-brand-700 bg-black px-4 py-2 text-sm text-brand-100 hover:bg-brand-600/10 transition shadow-[0_0_10px_theme(colors.brand.600)]"
             >
-              View services
+              > ls services
             </a>
             <a
               href="#contact"
-              class="inline-flex items-center rounded-lg border border-neutral-800 px-4 py-2 text-sm text-neutral-200 hover:bg-neutral-900 transition"
+              class="inline-flex items-center rounded border border-brand-700 bg-black px-4 py-2 text-sm text-brand-100 hover:bg-brand-600/10 transition"
             >
-              Contact
+              > ping tiabyte
             </a>
           </div>
         </div>
@@ -83,67 +89,56 @@
     </section>
 
     <!-- Services -->
-    <section id="services" class="mx-auto max-w-7xl px-6 py-16">
+    <section
+      id="services"
+      class="mx-auto max-w-7xl px-4 md:px-6 py-12 md:py-16"
+    >
       <div class="flex items-end justify-between gap-6">
-        <h2 class="text-2xl md:text-3xl font-semibold text-white">Services</h2>
-        <p class="text-sm text-neutral-400 max-w-lg">
+        <h2 class="text-2xl md:text-3xl text-brand-100 text-glow">/services</h2>
+        <p class="text-xs md:text-sm text-brand-300/80 max-w-lg">
           Practical solutions with maintainable code and measurable outcomes.
         </p>
       </div>
 
-      <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div
+        class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6"
+      >
         <article
-          class="rounded-xl border border-neutral-800 bg-neutral-900/40 p-6 hover:border-neutral-700 transition"
+          class="rounded-lg border border-brand-800 bg-black p-5 hover:border-brand-600 transition shadow-[0_0_12px_theme(colors.brand.900)]"
         >
-          <div
-            class="size-9 rounded-md bg-brand-600/20 text-brand-300 flex items-center justify-center mb-4"
-          >
-            <span class="text-xs">W</span>
-          </div>
-          <h3 class="text-lg text-white">Website implementation</h3>
-          <p class="mt-2 text-sm text-neutral-400">
+          <div class="mb-3 text-brand-400">[ W ]</div>
+          <h3 class="text-lg text-brand-100">Website implementation</h3>
+          <p class="mt-1 text-sm text-brand-300/90">
             Responsive sites with modern stacks and accessible UI.
           </p>
         </article>
 
         <article
-          class="rounded-xl border border-neutral-800 bg-neutral-900/40 p-6 hover:border-neutral-700 transition"
+          class="rounded-lg border border-brand-800 bg-black p-5 hover:border-brand-600 transition shadow-[0_0_12px_theme(colors.brand.900)]"
         >
-          <div
-            class="size-9 rounded-md bg-brand-600/20 text-brand-300 flex items-center justify-center mb-4"
-          >
-            <span class="text-xs">C</span>
-          </div>
-          <h3 class="text-lg text-white">Programming</h3>
-          <p class="mt-2 text-sm text-neutral-400">
+          <div class="mb-3 text-brand-400">[ C ]</div>
+          <h3 class="text-lg text-brand-100">Programming</h3>
+          <p class="mt-1 text-sm text-brand-300/90">
             Clean, testable code for frontend and backend services.
           </p>
         </article>
 
         <article
-          class="rounded-xl border border-neutral-800 bg-neutral-900/40 p-6 hover:border-neutral-700 transition"
+          class="rounded-lg border border-brand-800 bg-black p-5 hover:border-brand-600 transition shadow-[0_0_12px_theme(colors.brand.900)]"
         >
-          <div
-            class="size-9 rounded-md bg-brand-600/20 text-brand-300 flex items-center justify-center mb-4"
-          >
-            <span class="text-xs">A</span>
-          </div>
-          <h3 class="text-lg text-white">Application development</h3>
-          <p class="mt-2 text-sm text-neutral-400">
+          <div class="mb-3 text-brand-400">[ A ]</div>
+          <h3 class="text-lg text-brand-100">Application development</h3>
+          <p class="mt-1 text-sm text-brand-300/90">
             From MVPs to production apps with CI/CD and observability.
           </p>
         </article>
 
         <article
-          class="rounded-xl border border-neutral-800 bg-neutral-900/40 p-6 hover:border-neutral-700 transition"
+          class="rounded-lg border border-brand-800 bg-black p-5 hover:border-brand-600 transition shadow-[0_0_12px_theme(colors.brand.900)]"
         >
-          <div
-            class="size-9 rounded-md bg-brand-600/20 text-brand-300 flex items-center justify-center mb-4"
-          >
-            <span class="text-xs">DB</span>
-          </div>
-          <h3 class="text-lg text-white">Database work</h3>
-          <p class="mt-2 text-sm text-neutral-400">
+          <div class="mb-3 text-brand-400">[ DB ]</div>
+          <h3 class="text-lg text-brand-100">Database work</h3>
+          <p class="mt-1 text-sm text-brand-300/90">
             Schema design, performance tuning, and migrations.
           </p>
         </article>
@@ -151,49 +146,49 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="mx-auto max-w-7xl px-6 py-16">
-      <div class="rounded-2xl border border-neutral-800 bg-neutral-900/40 p-8">
-        <h2 class="text-2xl md:text-3xl font-semibold text-white">
-          Get in touch
-        </h2>
-        <p class="mt-2 text-neutral-400 max-w-prose">
-          Have a project in mind or need help shipping faster? Reach out and
-          let’s discuss details.
+    <section id="contact" class="mx-auto max-w-7xl px-4 md:px-6 py-12 md:py-16">
+      <div
+        class="rounded-xl border border-brand-800 bg-black p-6 md:p-8 shadow-[0_0_14px_theme(colors.brand.900)]"
+      >
+        <h2 class="text-2xl md:text-3xl text-brand-100 text-glow">/contact</h2>
+        <p class="mt-2 text-brand-300/90 max-w-prose">
+          Have a project in mind or need help shipping faster? Initialize a
+          session and let’s plan the path to prod.
         </p>
-        <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div class="space-y-1">
-            <div class="text-sm text-neutral-400">Email</div>
-            <div class="text-white">mcoha89@gmail.com</div>
+            <div class="text-xs text-brand-400">email</div>
+            <div class="text-brand-100">mcoha89@gmail.com</div>
           </div>
           <div class="space-y-1">
-            <div class="text-sm text-neutral-400">Location</div>
-            <div class="text-white">Zagreb, Croatia</div>
+            <div class="text-xs text-brand-400">location</div>
+            <div class="text-brand-100">Zagreb, Croatia</div>
           </div>
           <div class="space-y-1">
-            <div class="text-sm text-neutral-400">Availability</div>
-            <div class="text-white">Open to new projects</div>
+            <div class="text-xs text-brand-400">availability</div>
+            <div class="text-brand-100">Open to new projects</div>
           </div>
         </div>
         <div class="mt-8">
           <a
             href="mailto:mcoha89@gmail.com"
-            class="inline-flex items-center gap-2 rounded-lg bg-brand-500 px-4 py-2 text-sm font-medium text-neutral-950 hover:bg-brand-400 transition"
+            class="inline-flex items-center gap-2 rounded border border-brand-700 bg-black px-4 py-2 text-sm text-brand-100 hover:bg-brand-600/10 transition shadow-[0_0_10px_theme(colors.brand.600)]"
           >
-            Email Tiabyte
+            > email tiabyte
           </a>
         </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="border-t border-neutral-800/60">
+    <footer class="border-t border-brand-800/60">
       <div
-        class="mx-auto max-w-7xl px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4"
+        class="mx-auto max-w-7xl px-4 md:px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4"
       >
-        <div class="text-sm text-neutral-500">
-          © <span id="year"></span> Tiabyte. All rights reserved.
+        <div class="text-sm text-brand-300/80">
+          © <span id="year"></span> Tiabyte
         </div>
-        <div class="text-sm text-neutral-500">Built with Tailwind CSS</div>
+        <div class="text-sm text-brand-300/80">Built with Tailwind CSS</div>
       </div>
     </footer>
 
